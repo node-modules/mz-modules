@@ -22,6 +22,8 @@ Same as [mz], but wrap modules in the world rather than core API.
 [download-image]: https://img.shields.io/npm/dm/mz-modules.svg?style=flat-square
 [download-url]: https://npmjs.org/package/mz-modules
 
+Node require `>= 4.0.0`
+
 ## Usage
 
 Install it
@@ -67,3 +69,19 @@ async function doSomething() {
 [rimraf]: https://github.com/isaacs/rimraf
 [ko-sleep]: https://github.com/alsotang/ko-sleep
 [glob]: https://github.com/isaacs/node-glob
+
+## Contribute
+
+You can request adding module to mz-modules
+
+1. [Create a issue](https://github.com/node-modules/mz-modules/issues) let us know why you want to add the module.
+1. Add a module, named `xx`
+  - create `xx.js` that exports a function should return promise.
+  - require `xx.js` in `index.js`
+  - add a testcase for it in `test/xx.test.js`
+  - add xx.js to files in `package.json`
+1. Create a pull request
+
+## License
+
+[MIT](LICENSE)

@@ -4,7 +4,7 @@ const assert = require('assert');
 const mz = require('..');
 
 describe('test/nexttick.test.js', () => {
-  it.only('should nextTick', done => {
+  it('should nextTick', done => {
     let isRun = false;
     mz.nexttick().then(() => {
       assert(isRun);
