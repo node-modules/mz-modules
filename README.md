@@ -1,5 +1,6 @@
 # mz-modules
 
+Same as [mz], but wrap modules in the world rather than core API.
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -21,8 +22,6 @@
 [download-image]: https://img.shields.io/npm/dm/mz-modules.svg?style=flat-square
 [download-url]: https://npmjs.org/package/mz-modules
 
-Same as [mz], but wrap modules in the world rather than core API.
-
 ## Usage
 
 Install it
@@ -43,6 +42,28 @@ You can also require it from the main entry, but it will load other modules in m
 const mkdirp = require('mz-modules').mkdirp;
 ```
 
+Use it
+
+```js
+// Using promise
+mkdirp('/path/to/dir').then(() => console.log('done'));
+
+// Or if you are using async function
+async function doSomething() {
+  await mkdirp('/path/to/dir');
+}
+```
+
 ## Modules
 
-- 
+- mkdirp wrapped [mkdirp]
+- rimraf wrapped [rimraf]
+- sleep wrapped [ko-sleep]
+- nexttick wrapped process.nextTick
+- glob wrapped [glob]
+
+[mz]: https://github.com/normalize/mz
+[mkdirp]: https://github.com/substack/node-mkdirp
+[rimraf]: https://github.com/isaacs/rimraf
+[ko-sleep]: https://github.com/alsotang/ko-sleep
+[glob]: https://github.com/isaacs/node-glob
