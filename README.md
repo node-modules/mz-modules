@@ -58,18 +58,12 @@ async function doSomething() {
 
 ## Modules
 
-- mkdirp wrapped [mkdirp]
-- rimraf wrapped [rimraf]
-- glob wrapped [glob]
-- sleep wrapped [ko-sleep]
-- nextTick wrapped process.nextTick
-- setImmediate wrapped setImmediate
-
-[mz]: https://github.com/normalize/mz
-[mkdirp]: https://github.com/substack/node-mkdirp
-[rimraf]: https://github.com/isaacs/rimraf
-[ko-sleep]: https://github.com/alsotang/ko-sleep
-[glob]: https://github.com/isaacs/node-glob
+- `mz-modules/mkdirp` wrapped [mkdirp]
+- `mz-modules/rimraf` wrapped [rimraf]
+- `mz-modules/glob` wrapped [glob]
+- `mz-modules/sleep` wrapped [ko-sleep]
+- `mz-modules/nextTick` wrapped process.nextTick
+- `mz-modules/setImmediate` wrapped setImmediate
 
 ## Contribute
 
@@ -86,3 +80,9 @@ You can request adding module to mz-modules
 ## License
 
 [MIT](LICENSE)
+
+[mz]: https://github.com/normalize/mz
+[mkdirp]: https://github.com/substack/node-mkdirp
+[rimraf]: https://github.com/isaacs/rimraf
+[ko-sleep]: https://github.com/alsotang/ko-sleep
+[glob]: https://github.com/isaacs/node-glob
