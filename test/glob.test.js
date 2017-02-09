@@ -21,7 +21,7 @@ describe('test/glob.test.js', () => {
     const files = yield mz.glob(`${fixtures}/**/c`);
     assert(files.length === 1);
     // fix windows path
-    assert(files[0] === tmp.relace(/\\/g, '/'));
+    assert(files[0] === tmp.replace(/\\/g, '/'));
   });
 
   it('should glob with option', function* () {
