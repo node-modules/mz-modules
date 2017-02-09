@@ -4,6 +4,7 @@ const path = require('path');
 const assert = require('assert');
 const fs = require('mz/fs');
 const rimraf = require('rimraf');
+const os = require('os');
 const mz = require('..');
 const fixtures = path.join(__dirname, 'fixtures');
 
@@ -16,6 +17,8 @@ describe('test/mkdirp.test.js', () => {
     assert(made === path.join(fixtures, 'a'));
     assert(yield fs.exists(tmp));
   });
+
+  if (os.platform() === 'win32') return;
 
   it('should mkdir with option', function* () {
     yield mz.mkdirp(tmp, { mode: 0o744 }); // drwxr--r--
