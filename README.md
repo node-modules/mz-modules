@@ -56,6 +56,8 @@ async function doSomething() {
 }
 ```
 
+**Warning:** nextTick and setImmediate is little slower than callback, because promise queue is after nextTick.
+
 ## Modules
 
 - `mz-modules/mkdirp` wrapped [mkdirp]
