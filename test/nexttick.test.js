@@ -13,7 +13,7 @@ describe('test/nextTick.test.js', () => {
     isRun = true;
   });
 
-  it.only('should test running order', done => {
+  it('should test running order', done => {
     const arr = [];
     process.nextTick(() => arr.push('process.nextTick1'));
     mz.nextTick().then(() => arr.push('mz.nextTick1'));
