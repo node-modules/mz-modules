@@ -1,0 +1,54 @@
+{
+  "name": "mz-modules",
+  "version": "1.0.0",
+  "description": "modernize node.js modules to current ECMAScript standards",
+  "dependencies": {
+    "glob": "^7.1.1",
+    "ko-sleep": "^1.0.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {
+    "autod": "^2.7.1",
+    "egg-bin": "^2.0.2",
+    "egg-ci": "^1.1.0",
+    "eslint": "^3.15.0",
+    "eslint-config-egg": "^3.2.0",
+    "mm": "^2.1.0",
+    "mz": "^2.6.0",
+    "stat-mode": "^0.2.2",
+    "supertest": "^3.0.0",
+    "webstorm-disable-index": "^1.1.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "autod": "autod",
+    "lint": "eslint .",
+    "dev": "egg-bin dev",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "glob.js",
+    "mkdirp.js",
+    "rimraf.js",
+    "setImmediate.js",
+    "nextTick.js",
+    "sleep.js"
+  ],
+  "ci": {
+    "version": "4, 6, 7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:node-modules/mz-modules.git"
+  },
+  "author": "popomore <sakura9515@gmail.com>",
+  "license": "MIT"
+}
