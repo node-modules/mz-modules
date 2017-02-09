@@ -4,16 +4,18 @@ const path = require('path');
 const assert = require('assert');
 const fs = require('mz/fs');
 const mm = require('mm');
+const mkdirp = require('mkdirp');
+const rimraf = require('rimraf');
 const mz = require('..');
 const fixtures = path.join(__dirname, 'fixtures');
 
 describe('test/glob.test.js', () => {
   const tmp = path.join(fixtures, 'a/b/c');
-  beforeEach(() => mz.mkdirp(tmp));
+  beforeEach(done => mkdirp(tmp, done));
   beforeEach(done => fs.writeFile(path.join(tmp, 'a.js'), '', done));
   beforeEach(done => fs.writeFile(path.join(tmp, '.dotfile'), '', done));
   afterEach(mm.restore);
-  afterEach(() => mz.rimraf(path.join(fixtures, 'a')));
+  afterEach(done => rimraf(path.join(fixtures, 'a'), done));
 
   it('should glob', function* () {
     const files = yield mz.glob(`${fixtures}/**/c`);

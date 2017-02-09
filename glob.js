@@ -1,15 +1,6 @@
 'use strict';
 
 const glob = require('glob');
+const wrap = require('./lib/wrap');
 
-module.exports = (pattern, options) => {
-  return new Promise((resolve, reject) => {
-    glob(pattern, options, (err, matches) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(matches);
-      }
-    });
-  });
-};
+module.exports = wrap(glob);

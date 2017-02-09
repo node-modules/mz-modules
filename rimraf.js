@@ -1,16 +1,6 @@
 'use strict';
 
 const rimraf = require('rimraf');
+const wrap = require('./lib/wrap');
 
-module.exports = (dir, options) => {
-  options = options || {};
-  return new Promise((resolve, reject) => {
-    rimraf(dir, options, err => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve();
-      }
-    });
-  });
-};
+module.exports = wrap(rimraf);

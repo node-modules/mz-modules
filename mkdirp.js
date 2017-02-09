@@ -1,15 +1,6 @@
 'use strict';
 
 const mkdirp = require('mkdirp');
+const wrap = require('./lib/wrap');
 
-module.exports = (dir, options) => {
-  return new Promise((resolve, reject) => {
-    mkdirp(dir, options, (err, made) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(made);
-      }
-    });
-  });
-};
+module.exports = wrap(mkdirp);

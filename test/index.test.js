@@ -11,4 +11,12 @@ describe('test/index.test.js', () => {
       assert(require('../' + key) === mz[key]);
     }
   });
+
+  it('should check pkg.files', () => {
+    const keys = Object.keys(mz);
+    const pkg = require('../package.json');
+    for (const key of keys) {
+      assert(pkg.files.indexOf(key + '.js') > -1);
+    }
+  });
 });

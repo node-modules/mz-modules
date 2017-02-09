@@ -3,12 +3,13 @@
 const path = require('path');
 const assert = require('assert');
 const fs = require('mz/fs');
+const rimraf = require('rimraf');
 const mz = require('..');
 const fixtures = path.join(__dirname, 'fixtures');
 
 describe('test/mkdirp.test.js', () => {
   const tmp = path.join(fixtures, 'a/b/c');
-  afterEach(() => mz.rimraf(path.join(fixtures, 'a')));
+  afterEach(done => rimraf(path.join(fixtures, 'a'), done));
 
   it('should mkdir', function* () {
     const made = yield mz.mkdirp(tmp);

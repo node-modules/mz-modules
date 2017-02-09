@@ -32,6 +32,16 @@
     "cov": "egg-bin cov",
     "ci": "npm run lint && npm run cov"
   },
+  "files": [
+    "lib",
+    "index.js",
+    "glob.js",
+    "mkdirp.js",
+    "rimraf.js",
+    "setImmediate.js",
+    "nextTick.js",
+    "sleep.js"
+  ],
   "ci": {
     "version": "4, 6, 7"
   },
