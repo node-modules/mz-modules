@@ -60,9 +60,10 @@ async function doSomething() {
 
 - mkdirp wrapped [mkdirp]
 - rimraf wrapped [rimraf]
-- sleep wrapped [ko-sleep]
-- nexttick wrapped process.nextTick
 - glob wrapped [glob]
+- sleep wrapped [ko-sleep]
+- nextTick wrapped process.nextTick
+- setImmediate wrapped setImmediate
 
 [mz]: https://github.com/normalize/mz
 [mkdirp]: https://github.com/substack/node-mkdirp
