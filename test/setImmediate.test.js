@@ -13,16 +13,13 @@ describe('test/setImmediate.test.js', () => {
     isRun = true;
   });
 
-  it('should setImmediate after nextTick', done => {
-    let calledBy = '';
-    mz.nextTick().then(() => {
-      calledBy = 'nextTick';
-    });
-    mz.setImmediate().then(() => {
-      calledBy = 'setImmediate';
-    });
+  it('should test running order', done => {
+    const arr = [];
+    setImmediate(() => arr.push('setImmediate'));
+    mz.setImmediate().then(() => arr.push('mz.setImmediate'));
+    mz.nextTick().then(() => arr.push('mz.nextTick'));
     setTimeout(() => {
-      assert(calledBy === 'setImmediate');
+      assert.deepEqual(arr, [ 'mz.nextTick', 'setImmediate', 'mz.setImmediate' ]);
       done();
     }, 10);
   });
