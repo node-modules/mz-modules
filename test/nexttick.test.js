@@ -3,10 +3,10 @@
 const assert = require('assert');
 const mz = require('..');
 
-describe('test/nexttick.test.js', () => {
-  it('should nextTick', done => {
+describe('test/nextTick.test.js', () => {
+  it('should nextTick async', done => {
     let isRun = false;
-    mz.nexttick().then(() => {
+    mz.nextTick().then(() => {
       assert(isRun);
       done();
     });

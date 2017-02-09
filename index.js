@@ -3,7 +3,8 @@
 module.exports = {
   mkdirp: require('./mkdirp'),
   rimraf: require('./rimraf'),
-  sleep: require('./sleep'),
-  nexttick: require('./nexttick'),
   glob: require('./glob'),
+  sleep: require('./sleep'),
+  nextTick: require('./nextTick'),
+  setImmediate: require('./setImmediate'),
 };

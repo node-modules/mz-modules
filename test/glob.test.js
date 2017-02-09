@@ -23,7 +23,8 @@ describe('test/glob.test.js', () => {
 
   it('should glob with option', function* () {
     const files = yield mz.glob(`${fixtures}/**/*`, { dot: true });
-    assert(files.length === 5);
+    console.log(files);
+    assert(files.length === 6);
   });
 
   it('should error', function* () {
