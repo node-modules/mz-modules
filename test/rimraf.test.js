@@ -16,7 +16,7 @@ describe('test/rimraf.test.js', () => {
     assert(!(yield fs.exists(tmp)));
   });
 
-  it('should rimraf sync', function* () {
+  it('should rimraf.sync', function* () {
     mz.rimraf.sync(tmp);
     assert(!(yield fs.exists(tmp)));
   });
