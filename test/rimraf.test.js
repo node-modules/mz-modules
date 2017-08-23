@@ -16,6 +16,11 @@ describe('test/rimraf.test.js', () => {
     assert(!(yield fs.exists(tmp)));
   });
 
+  it('should rimraf sync', function* () {
+    mz.rimraf.sync(tmp);
+    assert(!(yield fs.exists(tmp)));
+  });
+
   it('should rimraf with option', function* () {
     yield mz.rimraf(`${fixtures}/**/c`, { glob: false });
     assert(yield fs.exists(tmp));

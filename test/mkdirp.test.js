@@ -18,6 +18,12 @@ describe('test/mkdirp.test.js', () => {
     assert(yield fs.exists(tmp));
   });
 
+  it('should mkdir.sync', function* () {
+    const made = mz.mkdirp.sync(tmp);
+    assert(made === path.join(fixtures, 'a'));
+    assert(yield fs.exists(tmp));
+  });
+
   if (os.platform() === 'win32') return;
 
   it('should mkdir with option', function* () {
