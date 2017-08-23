@@ -24,6 +24,13 @@ describe('test/glob.test.js', () => {
     assert(files[0] === tmp.replace(/\\/g, '/'));
   });
 
+  it('should glob.sync', () => {
+    const files = mz.glob.sync(`${fixtures}/**/c`);
+    assert(files.length === 1);
+    // fix windows path
+    assert(files[0] === tmp.replace(/\\/g, '/'));
+  });
+
   it('should glob with option', function* () {
     const files = yield mz.glob(`${fixtures}/**/*`, { dot: true });
     console.log(files);
