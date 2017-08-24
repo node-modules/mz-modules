@@ -1,6 +1,6 @@
 # mz-modules
 
-Same as [mz], but wrap modules in the world rather than core API.
+Same as [mz], but wrap many popular modules rather than core API.
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
