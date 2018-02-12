@@ -7,4 +7,5 @@ module.exports = {
   sleep: require('./sleep'),
   nextTick: require('./nextTick'),
   setImmediate: require('./setImmediate'),
+  pump: require('./pump'),
 };
