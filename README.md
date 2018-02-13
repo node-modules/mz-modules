@@ -66,6 +66,7 @@ async function doSomething() {
 - `mz-modules/sleep` wrapped [ko-sleep]
 - `mz-modules/nextTick` wrapped process.nextTick
 - `mz-modules/setImmediate` wrapped setImmediate
+- `mz-modules/pump` wrapped [pump]
 
 ## Contribute
 
@@ -88,3 +89,4 @@ You can request adding module to mz-modules
 [rimraf]: https://github.com/isaacs/rimraf
 [ko-sleep]: https://github.com/alsotang/ko-sleep
 [glob]: https://github.com/isaacs/node-glob
+[pump]: https://github.com/mafintosh/pump
