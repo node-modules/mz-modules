@@ -1,6 +1,6 @@
 {
   "name": "mz-modules",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "modernize node.js modules to current ECMAScript standards",
   "dependencies": {
     "glob": "^7.1.2",
