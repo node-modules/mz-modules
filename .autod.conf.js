@@ -16,11 +16,9 @@ module.exports = {
     'eslint',
     'eslint-config-egg',
     'supertest',
-    'webstorm-disable-index',
   ],
   exclude: [
     './test/fixtures',
     './dist',
   ],
-  registry: 'https://r.cnpmjs.org',
 };
