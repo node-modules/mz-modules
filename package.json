@@ -44,8 +44,11 @@
     "pump.js"
   ],
   "ci": {
-    "version": "6, 8, 10, 12, 14, 16",
-    "type": "github"
+    "version": "8, 10, 12, 14, 16",
+    "type": "github",
+    "os": {
+      "github": "linux, macos"
+    }
   },
   "repository": {
     "type": "git",
