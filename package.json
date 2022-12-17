@@ -10,9 +10,7 @@
     "rimraf": "^2.6.1"
   },
   "devDependencies": {
-    "autod": "^2.9.0",
     "egg-bin": "^4.1.0",
-    "egg-ci": "^1.8.0",
     "eslint": "^4.5.0",
     "eslint-config-egg": "^5.0.0",
     "mm": "^2.1.0",
@@ -24,7 +22,6 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "autod": "autod",
     "lint": "eslint .",
     "dev": "egg-bin dev",
     "test": "npm run lint -- --fix && npm run test-local",
@@ -43,13 +40,6 @@
     "sleep.js",
     "pump.js"
   ],
-  "ci": {
-    "version": "8, 10, 12, 14, 16",
-    "type": "github",
-    "os": {
-      "github": "linux, macos"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:node-modules/mz-modules.git"
