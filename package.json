@@ -3,11 +3,11 @@
   "version": "2.1.0",
   "description": "modernize node.js modules to current ECMAScript standards",
   "dependencies": {
-    "glob": "^7.1.2",
+    "glob": "^9.0.0",
     "ko-sleep": "^1.0.3",
     "mkdirp": "^0.5.1",
     "pump": "^3.0.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^4.0.0"
   },
   "devDependencies": {
     "egg-bin": "^4.1.0",
